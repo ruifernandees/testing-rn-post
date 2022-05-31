@@ -1,6 +1,17 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
-  }
+    "jsx": "react",
+    "strict": true,
+    "baseUrl": "./",
+    "allowJs": true,
+    "strictPropertyInitialization": false,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/**/*", "src/**/*.json"],
+  "buildOptions": {},
+  "compileOnSave": true
 }
