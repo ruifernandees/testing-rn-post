@@ -15,7 +15,7 @@ export const UserCardComponent: React.FC<UserCardComponentProps> = ({
     <ProfileImage source={userImage} testID="profile-image" />
     <DataContainer>
       <Name>{userName}</Name>
-      <Role>{userRole}</Role>
+      <Role>{userRole || 'Developer'}</Role>
     </DataContainer>
   </CardContainerComponent>
 );

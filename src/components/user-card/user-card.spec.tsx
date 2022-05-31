@@ -3,8 +3,8 @@ import { render } from '@testing-library/react-native';
 import { UserCardComponent } from '.';
 
 describe('UserCardComponent', () => {
-  const imageUri = 'https://github.com/ruifernandees.png';
   test('Should render correctly', () => {
+    const imageUri = 'https://github.com/ruifernandees.png';
     const { getByText, getByTestId } = render(
       <UserCardComponent
         userImage={{ uri: imageUri }}
