@@ -1,20 +1,21 @@
 import React from 'react';
-import {UserCardComponentProps} from './props';
-import {Container, DataContainer, Name, ProfileImage, Role} from './styles';
+import { CardContainerComponent } from '../card-container';
+import { UserCardComponentProps } from './props';
+import {
+  DataContainer, Name, ProfileImage, Role,
+} from './styles';
 
 export const UserCardComponent: React.FC<UserCardComponentProps> = ({
   userImage,
   userName,
   userRole,
   ...rest
-}) => {
-  return (
-    <Container {...rest}>
-      <ProfileImage source={userImage} />
-      <DataContainer>
-        <Name>{userName}</Name>
-        <Role>{userRole}</Role>
-      </DataContainer>
-    </Container>
-  );
-};
+}) => (
+  <CardContainerComponent {...rest}>
+    <ProfileImage source={userImage} testID="profile-image" />
+    <DataContainer>
+      <Name>{userName}</Name>
+      <Role>{userRole}</Role>
+    </DataContainer>
+  </CardContainerComponent>
+);

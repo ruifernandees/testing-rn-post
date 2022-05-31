@@ -1,6 +1,6 @@
-import {ImageSourcePropType, ViewProps} from 'react-native';
+import { ImageSourcePropType, TouchableOpacityProps } from 'react-native';
 
-export interface UserCardComponentProps extends ViewProps {
+export interface UserCardComponentProps extends TouchableOpacityProps {
   userImage: ImageSourcePropType;
   userName: string;
   userRole: string;
